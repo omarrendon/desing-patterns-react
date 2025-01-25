@@ -1,5 +1,5 @@
 import "./App.css";
-import { RenderProps } from "./components";
+import { RenderProps, ControlProps } from "./components";
 
 function App() {
   return (
@@ -8,6 +8,7 @@ function App() {
         <h1>Patrones de renderizado y composición </h1>
       </header>
       <RenderProps />
+      <ControlProps />
     </>
   );
 }
