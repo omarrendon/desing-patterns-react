@@ -1,5 +1,10 @@
 import "./App.css";
-import { RenderProps, ControlProps, CompoundComponent } from "./components";
+import {
+  RenderProps,
+  ControlProps,
+  CompoundComponent,
+  HOC,
+} from "./components";
 
 function App() {
   return (
@@ -9,7 +14,8 @@ function App() {
       </header>
       {/* <RenderProps /> */}
       {/* <ControlProps /> */}
-      <CompoundComponent />
+      {/* <CompoundComponent /> */}
+      <HOC />
     </>
   );
 }
