@@ -4,6 +4,7 @@ import {
   ControlProps,
   CompoundComponent,
   HOC,
+  CustomHook,
 } from "./components";
 
 function App() {
@@ -15,7 +16,8 @@ function App() {
       {/* <RenderProps /> */}
       {/* <ControlProps /> */}
       {/* <CompoundComponent /> */}
-      <HOC />
+      {/* <HOC /> */}
+      <CustomHook />
     </>
   );
 }
