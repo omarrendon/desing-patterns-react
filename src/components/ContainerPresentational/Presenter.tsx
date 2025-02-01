@@ -1,17 +1,19 @@
 import React from "react";
-import { useFetch } from "./useFetch";
+import { IUser } from "../CustomHook/CustomHook";
 
-export interface IUser {
-  name: string;
-  id: number;
-  email: string;
+interface IPropsPresenter {
+  isLoading: boolean;
+  error: string | null;
+  users: IUser[] | null;
+  refetch: () => void;
 }
 
-export const CustomHook: React.FC = () => {
-  const { data, error, isLoading, refetch } = useFetch<IUser[]>(
-    "https://jsonplaceholder.typicode.com/users"
-  );
-
+export const Presenter: React.FC<IPropsPresenter> = ({
+  error,
+  isLoading,
+  refetch,
+  users,
+}) => {
   if (isLoading) return <p>🔄 Cargando usuarios...</p>;
   if (error) return <p>❌ Error: {error}</p>;
 
@@ -20,7 +22,7 @@ export const CustomHook: React.FC = () => {
       <h2>Lista de usuarios</h2>
       <button onClick={refetch}>🔄 Recargar</button>
       <ul>
-        {data?.map(user => (
+        {users?.map(user => (
           <li key={user.id}>
             Usuario: {user.name} - {user.email}
           </li>

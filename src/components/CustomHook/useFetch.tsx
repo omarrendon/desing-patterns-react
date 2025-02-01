@@ -1,4 +1,4 @@
-import React, { useCallback, useEffect, useState } from "react";
+import React, { useCallback, useEffect, useMemo, useState } from "react";
 
 interface IUseFetchProps<T> {
   data: T | null;
@@ -17,12 +17,10 @@ export function useFetch<T>(url: string): IUseFetchProps<T> {
     setError(null);
     try {
       const response = await fetch(url);
-
       if (!response.ok) {
         throw new Error(`Error ${response.status}: ${response.statusText}`);
       }
       const dataResponse = await response.json();
-      console.log({ dataResponse });
       setData(dataResponse);
     } catch (error) {
       if (error instanceof Error) {
@@ -34,12 +32,14 @@ export function useFetch<T>(url: string): IUseFetchProps<T> {
     setIsLoading(false);
   }, [url]);
 
+  const memoizedData = useMemo(() => data, [data]);
+
   useEffect(() => {
     fetchData();
   }, [fetchData]);
 
   return {
-    data,
+    data: memoizedData,
     error,
     isLoading,
     refetch: fetchData,
