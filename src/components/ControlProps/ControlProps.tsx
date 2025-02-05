@@ -1,4 +1,5 @@
 import React from "react";
+import "./ControlProps.css";
 
 interface IControlProps {
   values?: Record<string, string>;
@@ -17,24 +18,19 @@ const FormChildren: React.FC<IControlProps> = ({
   const [internalValues, setInternalValues] = React.useState(
     defaultValues || {}
   );
-
   // Determinar si el formulario es controlado
   const isControlled = values !== undefined;
-
   // Obtener los valores actuales (controlados o internos)
   const currentValues = isControlled ? (values ? values : {}) : internalValues;
-
   // Manejar cambios en los campos
   const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     const { name, value } = e.target;
-
     if (!isControlled) {
       setInternalValues({
         ...internalValues,
         [name]: value,
       });
     }
-
     // Notificar al padre sobre los cambios
     if (onChange) {
       onChange({ ...currentValues, [name]: value });
@@ -50,41 +46,40 @@ const FormChildren: React.FC<IControlProps> = ({
   };
 
   return (
-    <form onSubmit={handleSubmit}>
-      <div>
-        <label>
-          Nombre:
-          <input
-            type="text"
-            name="nombre"
-            value={currentValues.nombre || ""}
-            onChange={handleChange}
-          />
-        </label>
+    <form onSubmit={handleSubmit} className="form-container">
+      <div className="form-input-container">
+        <label>Nombre:</label>
+        <input
+          type="text"
+          className="form-input"
+          name="nombre"
+          value={currentValues.nombre || ""}
+          onChange={handleChange}
+        />
       </div>
-      <div>
-        <label>
-          Email:
-          <input
-            type="email"
-            name="email"
-            value={currentValues.email || ""}
-            onChange={handleChange}
-          />
-        </label>
+      <div className="form-input-container">
+        <label>Email:</label>
+        <input
+          type="email"
+          className="form-input"
+          name="email"
+          value={currentValues.email || ""}
+          onChange={handleChange}
+        />
       </div>
-      <div>
-        <label>
-          Contraseña:
-          <input
-            type="password"
-            name="password"
-            value={currentValues.password || ""}
-            onChange={handleChange}
-          />
-        </label>
+      <div className="form-input-container">
+        <label>Contraseña:</label>
+        <input
+          type="password"
+          className="form-input"
+          name="password"
+          value={currentValues.password || ""}
+          onChange={handleChange}
+        />
       </div>
-      <button type="submit">Registrar</button>
+      <button type="submit" className="form-button">
+        Registrar
+      </button>
     </form>
   );
 };
@@ -105,7 +100,7 @@ export const ControlProps = () => {
   };
 
   return (
-    <div>
+    <div className="controlProps-container">
       <h1>Formulario de Registro</h1>
 
       {/* Formulario controlado */}
