@@ -6,6 +6,7 @@ import {
   HOC,
   CustomHook,
   Container,
+  Card,
 } from "./components";
 
 function App() {
@@ -19,7 +20,8 @@ function App() {
       {/* <CompoundComponent /> */}
       {/* <HOC /> */}
       {/* <CustomHook /> */}
-      <Container />
+      {/* <Container /> */}
+      <Card />
     </>
   );
 }
