@@ -1,6 +1,6 @@
 import React from "react";
 import "../App.css";
-import { ControlProps, DataGrid } from "../components";
+import { DataGrid, RenderProps } from "../components";
 
 export const HomeView: React.FC = () => {
   return (
@@ -10,14 +10,11 @@ export const HomeView: React.FC = () => {
       </header>
       <section>
         {/* <DataGrid /> */}
-        <ControlProps />
+        <RenderProps />
       </section>
-      <footer>
+      {/* <footer>
         Lorem ipsum dolor sit amet, consectetur adipisicing elit. Illum quos
-        blanditiis aspernatur similique nisi possimus delectus! Consequatur
-        aliquid natus dolorum a earum libero ipsam assumenda molestias voluptas
-        aut. Magni, molestias?
-      </footer>
+      </footer> */}
     </>
   );
 };
