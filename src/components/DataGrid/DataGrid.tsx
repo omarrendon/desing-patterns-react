@@ -3,6 +3,7 @@ import ControlPropsImage from "../../assets/control-props.png";
 import RenderPropsImage from "../../assets/render-props.png";
 import HOCImage from "../../assets/hoc.png";
 import HookImage from "../../assets/customHook.png";
+import CCImage from "../../assets/compound-componet.png";
 import { Card } from "../Card/Card";
 
 interface ISection {
@@ -42,6 +43,12 @@ const sections: ISection[] = [
     description: "container ejemplo",
     URLImage: HookImage,
     altText: "HOC ejemplo",
+  },
+  {
+    title: "Compound Component",
+    description: "CC ejemplo",
+    URLImage: CCImage,
+    altText: "CC ejemplo",
   },
 ];
 

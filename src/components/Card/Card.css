@@ -1,7 +1,6 @@
 .card-container {
   border: 1px solid var(--green);
   border-radius: 5px;
-  max-width: 320px;
   padding: 16px;
   transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
 }
@@ -18,7 +17,6 @@
 
 .card-image {
   width: 90%;
-  border-radius: 2%;
 }
 
 .card-description {
