@@ -37,6 +37,12 @@ const sections: ISection[] = [
     URLImage: HookImage,
     altText: "HOC ejemplo",
   },
+  {
+    title: "Container Presentational",
+    description: "container ejemplo",
+    URLImage: HookImage,
+    altText: "HOC ejemplo",
+  },
 ];
 
 export const DataGrid: React.FC = () => {
