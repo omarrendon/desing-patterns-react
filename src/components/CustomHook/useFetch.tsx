@@ -1,5 +1,6 @@
-import React, { useCallback, useEffect, useMemo, useState } from "react";
+import { useCallback, useEffect, useMemo, useState } from "react";
 
+// Interfaz que define el comportamiento de nuestro custom hook
 interface IUseFetchProps<T> {
   data: T | null;
   isLoading: boolean;
@@ -12,6 +13,7 @@ export function useFetch<T>(url: string): IUseFetchProps<T> {
   const [isLoading, setIsLoading] = useState<boolean>(false);
   const [error, setError] = useState<string | null>("");
 
+  // Función que realiza la petición y setea los estados a devolver
   const fetchData = useCallback(async () => {
     setIsLoading(true);
     setError(null);
@@ -32,8 +34,10 @@ export function useFetch<T>(url: string): IUseFetchProps<T> {
     setIsLoading(false);
   }, [url]);
 
+  // Memoizamos la data;
   const memoizedData = useMemo(() => data, [data]);
 
+  // Cada que se monta elc custom hook lanza la petición
   useEffect(() => {
     fetchData();
   }, [fetchData]);

@@ -1,6 +1,6 @@
 import React from "react";
 import "../App.css";
-import { DataGrid, HOC, RenderProps } from "../components";
+import { CustomHook, DataGrid, HOC, RenderProps } from "../components";
 
 export const HomeView: React.FC = () => {
   return (
@@ -9,9 +9,8 @@ export const HomeView: React.FC = () => {
         <h1>Patrones de renderizado y composición en React</h1>
       </header>
       <section>
-        {/* <DataGrid /> */}
-        {/* <RenderProps /> */}
-        <HOC />
+        <DataGrid />
+        {/* <CustomHook /> */}
       </section>
       {/* <footer>
         Lorem ipsum dolor sit amet, consectetur adipisicing elit. Illum quos

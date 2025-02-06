@@ -1,6 +1,8 @@
 import React from "react";
 import ControlPropsImage from "../../assets/control-props.png";
 import RenderPropsImage from "../../assets/render-props.png";
+import HOCImage from "../../assets/hoc.png";
+import HookImage from "../../assets/customHook.png";
 import { Card } from "../Card/Card";
 
 interface ISection {
@@ -21,13 +23,19 @@ const sections: ISection[] = [
     title: "Render Props",
     description: "  Render props ejemplo",
     URLImage: RenderPropsImage,
-    altText: "Control Props ejemplo",
+    altText: "Render Props ejemplo",
   },
   {
     title: "High Order Component",
     description: "HOC ejemplo",
-    URLImage: RenderPropsImage,
-    altText: "Control Props ejemplo",
+    URLImage: HOCImage,
+    altText: "HOC ejemplo",
+  },
+  {
+    title: "Custom Hook",
+    description: "Hook ejemplo",
+    URLImage: HookImage,
+    altText: "HOC ejemplo",
   },
 ];
 
