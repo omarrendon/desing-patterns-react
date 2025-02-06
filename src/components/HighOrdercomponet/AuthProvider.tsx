@@ -1,11 +1,13 @@
 import { createContext, useState } from "react";
 
+// Interfaz que nos indicará variables y métodos contendra nuestro estado
 interface IAuthContextProps {
   isAuthenticaded: boolean;
   login: () => void;
   logout: () => void;
 }
 
+// Creación de contexto
 export const AuthContext = createContext<IAuthContextProps | undefined>(
   undefined
 );

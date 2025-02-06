@@ -4,10 +4,13 @@ import { AuthProvider } from "./AuthProvider";
 import { BrowserRouter, Route, Routes, useNavigate } from "react-router";
 import HOCProtected from "./HOCProtected";
 
+// Página que simula el inicio de sesión
 const LoginPage: React.FC = () => {
   const navigate = useNavigate();
   const { login } = useAuth();
 
+  // Función que simula el inicio de sesión y redirige
+  // A la página protegida
   const handleSession = () => {
     login();
     navigate("/hoc");
@@ -20,6 +23,8 @@ const LoginPage: React.FC = () => {
     </div>
   );
 };
+
+// Página que nos dirige al Login
 const HomePage: React.FC = () => {
   const navigate = useNavigate();
 
@@ -33,6 +38,7 @@ const HomePage: React.FC = () => {
   );
 };
 
+// Componente principal que nos provee las rutas
 export const HOC = () => {
   return (
     <>

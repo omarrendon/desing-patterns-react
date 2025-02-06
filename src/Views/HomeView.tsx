@@ -1,6 +1,6 @@
 import React from "react";
 import "../App.css";
-import { DataGrid, RenderProps } from "../components";
+import { DataGrid, HOC, RenderProps } from "../components";
 
 export const HomeView: React.FC = () => {
   return (
@@ -10,7 +10,8 @@ export const HomeView: React.FC = () => {
       </header>
       <section>
         {/* <DataGrid /> */}
-        <RenderProps />
+        {/* <RenderProps /> */}
+        <HOC />
       </section>
       {/* <footer>
         Lorem ipsum dolor sit amet, consectetur adipisicing elit. Illum quos
