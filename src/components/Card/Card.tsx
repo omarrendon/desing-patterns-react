@@ -1,6 +1,5 @@
 import React from "react";
 import "./Card.css";
-import { Container } from "../ContainerPresentational/Container";
 
 interface ICardProps {
   title: string;

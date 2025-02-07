@@ -5,7 +5,7 @@ import { BrowserRouter, Route, Routes, useNavigate } from "react-router";
 import HOCProtected from "./HOCProtected";
 
 // Página que simula el inicio de sesión
-const LoginPage: React.FC = () => {
+export const LoginPage: React.FC = () => {
   const navigate = useNavigate();
   const { login } = useAuth();
 
@@ -43,13 +43,12 @@ export const HOC = () => {
   return (
     <>
       <AuthProvider>
-        <BrowserRouter>
-          <Routes>
-            <Route path="/hoc" element={<HOCProtected />} />
+        <HomePage />
+        {/* <Route path="/hoc" element={<HOCProtected />} />
             <Route path="/login" element={<LoginPage />} />
-            <Route path="/" element={<HomePage />} />
-          </Routes>
-        </BrowserRouter>
+            <Route path="/" element={<HomePage />} /> */}
+        {/* </Routes>
+        </BrowserRouter> */}
       </AuthProvider>
     </>
   );

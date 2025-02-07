@@ -41,16 +41,12 @@ section button {
   color: var(--green);
   cursor: pointer;
   border: 1px solid var(--green);
-  border-radius: 8px;
+  /* border-radius: 8px; */
   font-family: "Poppins", sans-serif;
   font-weight: 400;
   font-style: normal;
   padding: 8px 16px;
   transition: border 0.1s ease;
-  &:hover {
-    border-left: 2px solid var(--green);
-    border-bottom: 2px solid var(--green);
-  }
 }
 
 .Patterns {
@@ -58,8 +54,8 @@ section button {
   grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
   gap: 20px;
   & section {
-    border: 1px dashed var(--green);
-    border-radius: 8px;
+    border: 1px dashed var(--light-green);
+    /* border-radius: 8px; */
     padding: 24px;
     & h2 {
       margin: 0;
@@ -71,7 +67,7 @@ section button {
     align-items: center;
     gap: 16px;
     background-color: var(--light-green);
-    border-radius: 8px;
+    /* border-radius: 8px; */
     padding: 16px;
     & p,
     & ul {
@@ -83,9 +79,7 @@ section button {
     margin-bottom: 16px;
   }
   & img {
-    height: 160px;
-    width: 100%;
-    border-radius: 16px;
+    border-radius: 5px;
     object-fit: cover;
   }
   & input {

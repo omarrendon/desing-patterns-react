@@ -11,44 +11,57 @@ interface ISection {
   description: string;
   URLImage: string;
   altText?: string;
+  route: string;
 }
 
 const sections: ISection[] = [
   {
     title: "Control Props",
-    description: "  Conbtrol props ejemplo",
+    description:
+      "Permite que un componente pueda ser controlado tanto internamente como externamente.",
     URLImage: ControlPropsImage,
     altText: "Control Props ejemplo",
+    route: "/control-props",
   },
   {
     title: "Render Props",
-    description: "  Render props ejemplo",
+    description:
+      "Permite compartir lógica entre componentes mediante una función que se pasa como prop.",
     URLImage: RenderPropsImage,
     altText: "Render Props ejemplo",
+    route: "/render-props",
   },
   {
     title: "High Order Component",
-    description: "HOC ejemplo",
+    description:
+      "Es una función que recibe un componente y devuelve un nuevo componente mejorado",
     URLImage: HOCImage,
     altText: "HOC ejemplo",
+    route: "/hoc",
   },
   {
     title: "Custom Hook",
-    description: "Hook ejemplo",
+    description:
+      "Es una función que utiliza los hooks de React para encapsular lógica reutilizable.",
     URLImage: HookImage,
     altText: "HOC ejemplo",
+    route: "/custom-hook",
   },
   {
     title: "Container Presentational",
-    description: "container ejemplo",
+    description:
+      "Es una estrategia en React para separar la lógica de negocio de la presentación de UI.",
     URLImage: HookImage,
-    altText: "HOC ejemplo",
+    altText: "cont6aioner ejemplo",
+    route: "/container-presentational",
   },
   {
     title: "Compound Component",
-    description: "CC ejemplo",
+    description:
+      "Permite que varios componentes trabajen juntos como una unidad cohesiva.",
     URLImage: CCImage,
     altText: "CC ejemplo",
+    route: "/compound-component",
   },
 ];
 
