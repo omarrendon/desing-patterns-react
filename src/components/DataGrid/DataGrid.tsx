@@ -68,13 +68,14 @@ const sections: ISection[] = [
 export const DataGrid: React.FC = () => {
   return (
     <>
-      {sections.map(({ title, URLImage, description, altText }) => (
+      {sections.map(({ title, URLImage, description, altText, route }) => (
         <Card
           key={title}
           title={title}
           description={description}
           image={URLImage}
           altText={altText}
+          route={route}
         />
       ))}
     </>

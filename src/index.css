@@ -41,7 +41,6 @@ section button {
   color: var(--green);
   cursor: pointer;
   border: 1px solid var(--green);
-  /* border-radius: 8px; */
   font-family: "Poppins", sans-serif;
   font-weight: 400;
   font-style: normal;
@@ -55,7 +54,6 @@ section button {
   gap: 20px;
   & section {
     border: 1px dashed var(--light-green);
-    /* border-radius: 8px; */
     padding: 24px;
     & h2 {
       margin: 0;
@@ -67,7 +65,7 @@ section button {
     align-items: center;
     gap: 16px;
     background-color: var(--light-green);
-    /* border-radius: 8px; */
+    border-radius: 8px;
     padding: 16px;
     & p,
     & ul {
@@ -81,15 +79,6 @@ section button {
   & img {
     border-radius: 5px;
     object-fit: cover;
-  }
-  & input {
-    border: none;
-    border-radius: 8px;
-    padding: 8px;
-    font-family: "Poppins", sans-serif;
-    font-weight: 400;
-    font-style: normal;
-    width: calc(100% - 16px);
   }
 }
 

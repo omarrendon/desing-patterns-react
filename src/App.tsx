@@ -32,7 +32,6 @@ function App() {
             path="/compound-component"
             element={<CopoundComponentView />}
           />
-          {/* <HomeView /> */}
         </Routes>
       </BrowserRouter>
     </>
