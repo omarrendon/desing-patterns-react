@@ -7,3 +7,4 @@ export * from "./ContainerPresentational/Container";
 
 export * from "./Card/Card";
 export * from "./DataGrid/DataGrid";
+export * from "./GoBack/GoBack";

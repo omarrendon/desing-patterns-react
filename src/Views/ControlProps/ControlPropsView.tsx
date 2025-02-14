@@ -1,6 +1,6 @@
 import { Prism as SyntaxHighlighter } from "react-syntax-highlighter";
 import { dracula as syntaxHighlighterTheme } from "react-syntax-highlighter/dist/esm/styles/prism";
-import { ControlProps } from "../../components";
+import { ControlProps, GoBack } from "../../components";
 import "./ControlPropView.css";
 
 const componentToShow = `
@@ -134,6 +134,7 @@ export const ControlProps = () => {
 export const ControlPropsView = () => {
   return (
     <div className="container">
+      <GoBack route="/" />
       <h1>Control Props</h1>
       <div className="content-container">
         <p>
@@ -181,6 +182,7 @@ export const ControlPropsView = () => {
           <ControlProps />
         </div>
       </div>
+      <GoBack route="/" />
     </div>
   );
 };
