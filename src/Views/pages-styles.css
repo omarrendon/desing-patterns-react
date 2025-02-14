@@ -1,0 +1,17 @@
+.container {
+  padding: 50px;
+  display: flex !important;
+  /* align-items: center; */
+  flex-direction: column;
+  min-width: 320px !important;
+  background-color: var(--white);
+  color: var(--green);
+  font-family: "Poppins", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  text-align: justify;
+}
+
+.content-container {
+  width: 100%;
+}

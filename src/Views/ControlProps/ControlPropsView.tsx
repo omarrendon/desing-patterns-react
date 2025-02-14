@@ -169,6 +169,7 @@ export const ControlPropsView = () => {
           </p>
         </div>
         <div>
+          <h2> ✅ Código de ejemplo</h2>
           <SyntaxHighlighter
             language="jsx"
             showLineNumbers
