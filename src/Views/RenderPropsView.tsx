@@ -116,7 +116,7 @@ export const RenderPropsView = () => {
         <h2>Componente de ejemplo ⚛️</h2>
         <RenderProps />
       </div>
-      <div>
+      <div className="footer-container">
         <GoBack route="/" />
       </div>
     </div>

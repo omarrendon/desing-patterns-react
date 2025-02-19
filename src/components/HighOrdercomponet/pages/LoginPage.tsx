@@ -1,6 +1,6 @@
 import React from "react";
-import { useAuth } from "./useAuth";
 import { useNavigate } from "react-router";
+import { useAuth } from "../useAuth";
 
 // Página que simula el inicio de sesión
 export const LoginPage: React.FC = () => {
@@ -11,7 +11,7 @@ export const LoginPage: React.FC = () => {
   // A la página protegida
   const handleSession = () => {
     login();
-    navigate("/hoc");
+    navigate("/hoc-protected");
   };
 
   return (
@@ -20,23 +20,4 @@ export const LoginPage: React.FC = () => {
       <button onClick={handleSession}>Iniciar sesión</button>
     </div>
   );
-};
-
-// Página que nos dirige al Login
-const HomePage: React.FC = () => {
-  const navigate = useNavigate();
-
-  return (
-    <>
-      <h2>Página de Inicio</h2>
-      <div>
-        <button onClick={() => navigate("/login")}>Iniciar sesión</button>
-      </div>
-    </>
-  );
-};
-
-// Componente principal que nos provee las rutas
-export const HOC = () => {
-  return <HomePage />;
 };
